@@ -20,6 +20,7 @@ resource "aws_acm_certificate" "this" {
   subject_alternative_names = var.subject_alternative_names
   validation_method         = var.validation_method
 
+  certificate_authority_arn = var.certificate_authority_arn ? var.certificate_authority_arn : ""
   options {
     certificate_transparency_logging_preference = var.certificate_transparency_logging_preference ? "ENABLED" : "DISABLED"
   }

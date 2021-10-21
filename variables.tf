@@ -28,6 +28,12 @@ variable "certificate_transparency_logging_preference" {
   default     = true
 }
 
+variable "certificate_authority_arn" {
+  description = "If domain is part of a AWS Private CA, provide the arn for the AWS Private CA"
+  type        = string
+  default     = ""
+}
+
 variable "domain_name" {
   description = "A domain name for which the certificate should be issued"
   type        = string
